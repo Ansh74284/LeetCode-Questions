@@ -76,7 +76,7 @@ class Solution {
         } 
         
         Node newNode = new Node(data);
-        newNode.next = slow.next;
+        newNode.next = slow.next;  // thsese two line
         slow.next = newNode;
         
         return curr;
