@@ -14,6 +14,7 @@ class Solution {
                 stack.push(s.charAt(i));
             }
           }
+          //warna agar s.charAt(i)=='(' hua toh stack.peek()==')' mein hoga aur fir same wahi procedure follow hoga
           else{
               stack.push(s.charAt(i));
           }
