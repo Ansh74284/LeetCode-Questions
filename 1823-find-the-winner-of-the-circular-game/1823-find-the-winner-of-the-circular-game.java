@@ -5,13 +5,13 @@
 
 class Solution {
     public int findTheWinner(int n, int k) {
-        //Base case 
-        if(n==1){
-            return 1; //Only one player is left, so they are the winner
-        }
-        //Recursive Case
-        int nextSurvivor = (findTheWinner(n-1,k) + k-1)%n + 1;
-        return nextSurvivor;
+       return solve(n,k)+1;
+    }
+    public int solve(int n,int k)
+    {
+        if(n==1) //Base Case
+            return 0; //There is only one player in the game
+        return (solve(n-1,k)+k)%n; //Recursive Case
     }
 }
 
